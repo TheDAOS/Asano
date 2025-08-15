@@ -3,13 +3,12 @@
 import { setShoguns } from '@/lib/features/shogun/shogunSlice'
 import '../globals.css'
 import { createClient } from '@/utils/supabase/client'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 
 
 const Page = () => {
-    const [ log, setLog ] = useState<string>('');
     const dispatch = useDispatch()
     const shoguns = useSelector((state: any) => state.shogun.data)
 
@@ -22,10 +21,8 @@ const Page = () => {
 
             if (error) {
                 console.error('Error fetching data from shogun:', error)
-                setLog('Error fetching data from shogun: ' + JSON.stringify(error))
             } else {
                 console.log('Shogun table data:', data)
-                setLog('Shogun table data: ' + JSON.stringify(data))
                 dispatch(setShoguns(data))
             }
         }
@@ -47,8 +44,6 @@ const Page = () => {
                     <span>$0</span>
                 </div>
             </div>
-
-            {log}
 
             <div className="w-[90%] mx-auto flex flex-col gap-2">
                 {shoguns && shoguns.length > 0 ? (
