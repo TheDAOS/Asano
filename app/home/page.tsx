@@ -3,14 +3,16 @@
 import { setShoguns } from '@/lib/features/shogun/shogunSlice'
 import '../globals.css'
 import { createClient } from '@/utils/supabase/client'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 
 
 const Page = () => {
+    const [ log, setLog ] = useState<string>('');
     const dispatch = useDispatch()
     const shoguns = useSelector((state: any) => state.shogun.data)
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -20,8 +22,10 @@ const Page = () => {
 
             if (error) {
                 console.error('Error fetching data from shogun:', error)
+                setLog('Error fetching data from shogun: ' + JSON.stringify(error))
             } else {
                 console.log('Shogun table data:', data)
+                setLog('Shogun table data: ' + JSON.stringify(data))
                 dispatch(setShoguns(data))
             }
         }
