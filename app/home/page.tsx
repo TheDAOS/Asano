@@ -48,6 +48,7 @@ const Page = () => {
                 </div>
             </div>
 
+            {log}
 
             <div className="w-[90%] mx-auto flex flex-col gap-2">
                 {shoguns && shoguns.length > 0 ? (
