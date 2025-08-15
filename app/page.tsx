@@ -140,13 +140,3 @@ export default function Page() {
     </div>
   )
 }
-
-// export default function Home() {
-//   return (
-//     <>
-//       <h1>
-//         hello
-//       </h1>
-//     </>
-//   );
-// }
