@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
         name: 'Asano',
         short_name: 'Asano',
         description: 'Asano a Next.js PWA Expence tracker app',
-        start_url: '/',
+        start_url: '/home',
         display: 'standalone',
         background_color: '#ffffff',
         theme_color: '#000000',
