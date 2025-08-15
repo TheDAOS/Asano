@@ -16,18 +16,7 @@ interface ShogunState {
 }
 
 const initialState: ShogunState = {
-    data: [
-        {
-            id: 0,
-            amount: 10,
-            category: null,
-            created_at: '2025-08-15T19:43:30+00:00',
-            updated_at: '2025-08-16T01:13:33',
-            name: 'init Cigarette',
-            date: '2025-08-16T01:13:38',
-            note: null,
-        },
-    ],
+    data: [],
 };
 
 const shogunSlice = createSlice({
