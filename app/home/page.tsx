@@ -42,15 +42,15 @@ const Page = (): JSX.Element => {
             <div className='w-[90%] mx-auto flex items-center'>
                 <span className='mt-4 py-3 text-3xl font-bold'>Asano</span>
             </div>
-            
+
             <div className='w-[90%] mx-auto flex justify-between items-center gap-2'>
-                <div className="w-full rounded-lg p-4 flex items-center justify-between bg-white/10 backdrop-blur-md shadow-lg border border-white/20">
-                    <span>Total</span>
-                    <span>{inrFormatter(Total)}</span>
-                </div>
-                <div className="w-full rounded-lg p-4 flex items-center justify-between bg-white/10 backdrop-blur-md shadow-lg border border-white/20">
-                    <span>Total</span>
-                    <span>$0</span>
+                <div className="h-64 w-full rounded-4xl p-2 flex items-end justify-between bg-white/10 backdrop-blur-md shadow-lg border border-white/20">
+
+                    <div className="w-full rounded-4xl p-4 px-6 flex items-center justify-between bg-white/10 backdrop-blur-md shadow-lg border border-white/20">
+                        <span>Total</span>
+                        <span>{inrFormatter(Total)}</span>
+                    </div>
+
                 </div>
             </div>
 
@@ -65,11 +65,18 @@ const Page = (): JSX.Element => {
             </div>
 
             <div className='absolute bottom-0 w-full'>
-                <div className="m-6 rounded-lg p-4 flex items-center justify-between bg-white/10 backdrop-blur-md shadow-lg border border-white/20">
-                    <span className=''> Add </span>
-                    <span >Home</span>
-                    <span className=''>Settings</span>
-                    <span className=''>Expenses</span>
+                <div className="m-6 rounded-4xl p-2 flex justify-end items-center gap-2 bg-white/10 backdrop-blur-md shadow-lg border border-white/20">
+                    <div className='w-full rounded-4xl p-1 flex justify-center items-center bg-green-300/40 backdrop-blur-md shadow-lg border border-white/20'>
+                        <span className='text-center font-semibold'>Add</span>
+                    </div>
+
+                    <div className='w-fit rounded-4xl p-1 px-3 bg-white/10 backdrop-blur-md shadow-lg border border-white/20'>
+                        <span className='text-center font-semibold'>Home</span>
+                    </div>
+
+                    <div className='w-fit rounded-4xl p-1 px-3 bg-white/10 backdrop-blur-md shadow-lg border border-white/20'>
+                        <span className='text-center font-semibold'>Expenses</span>
+                    </div>
                 </div>
             </div>
         </div>
