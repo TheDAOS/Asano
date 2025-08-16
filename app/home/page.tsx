@@ -38,7 +38,7 @@ const Page = (): JSX.Element => {
     }, [dispatch])
 
     return (
-        <div className="h-screen w-screen bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white flex flex-col gap-3">
+        <div className="flex flex-col gap-3">
             <div className='w-[90%] mx-auto flex items-center'>
                 <span className='mt-4 py-3 text-3xl font-bold'>Asano</span>
             </div>
@@ -65,7 +65,7 @@ const Page = (): JSX.Element => {
             </div>
 
             <div className='absolute bottom-0 w-full'>
-                <div className="m-6 rounded-4xl p-2 flex justify-end items-center gap-2 bg-white/10 backdrop-blur-md shadow-lg border border-white/20">
+                <div className="sticky bottom-0 m-6 rounded-4xl p-2 flex justify-end items-center gap-2 bg-white/10 backdrop-blur-md shadow-lg border border-white/20">
                     <div className='w-full rounded-4xl p-1 flex justify-center items-center bg-green-300/40 backdrop-blur-md shadow-lg border border-white/20'>
                         <span className='text-center font-semibold select-none'>Add</span>
                     </div>
