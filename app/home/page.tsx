@@ -3,12 +3,16 @@
 import { setShoguns } from '@/lib/features/shogun/shogunSlice'
 import '../globals.css'
 import { createClient } from '@/utils/supabase/client'
-import { useEffect } from 'react'
+import { JSX, useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
+import ItemCard from './ItemCard'
+import type { IShogun } from '@/utils/type'
+import { inrFormatter } from '@/utils/formatter'
 
 
-const Page = () => {
+const Page = (): JSX.Element => {
+    const [Total, setTotal] = useState<number>(0)
     const dispatch = useDispatch()
     const shoguns = useSelector((state: any) => state.shogun.data)
 
@@ -25,6 +29,10 @@ const Page = () => {
                 console.log('Shogun table data:', data)
                 dispatch(setShoguns(data))
             }
+
+            // Calculate total amount
+            const totalAmount = data?.reduce((acc: number, item: IShogun) => acc + item.amount, 0)
+            setTotal(totalAmount ?? 0)
         }
         fetchData()
     }, [dispatch])
@@ -34,10 +42,11 @@ const Page = () => {
             <div className='w-[90%] mx-auto flex items-center'>
                 <span className='mt-4 py-3 text-3xl font-bold'>Asano</span>
             </div>
+            
             <div className='w-[90%] mx-auto flex justify-between items-center gap-2'>
                 <div className="w-full rounded-lg p-4 flex items-center justify-between bg-white/10 backdrop-blur-md shadow-lg border border-white/20">
                     <span>Total</span>
-                    <span>$0</span>
+                    <span>{inrFormatter(Total)}</span>
                 </div>
                 <div className="w-full rounded-lg p-4 flex items-center justify-between bg-white/10 backdrop-blur-md shadow-lg border border-white/20">
                     <span>Total</span>
@@ -47,14 +56,8 @@ const Page = () => {
 
             <div className="w-[90%] mx-auto flex flex-col gap-2">
                 {shoguns && shoguns.length > 0 ? (
-                    shoguns.map((shogun: any) => (
-                        <div
-                            key={shogun.id}
-                            className="rounded-lg p-4 bg-white/10 backdrop-blur-md shadow border border-white/20 flex justify-between items-center"
-                        >
-                            <span>{shogun.name}</span>
-                            <span>{shogun.amount}</span>
-                        </div>
+                    shoguns.map((shogun: IShogun) => (
+                        <ItemCard key={shogun.id} shogun={shogun} />
                     ))
                 ) : (
                     <span className="text-gray-400">No data available.</span>

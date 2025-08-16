@@ -1,4 +1,4 @@
-export interface Shogun {
+export interface IShogun {
     id: number;
     name: string;
     amount: number;
