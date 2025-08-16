@@ -13,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-gradient-to-br bg-fixed from-black via-gray-900 to-gray-800 text-white">
+      <body className="bg-gradient-to-br bg-fixed from-black via-gray-900 to-gray-800 text-white overflow-y-auto">
         <StoreProvider>
           {children}
         </StoreProvider>
