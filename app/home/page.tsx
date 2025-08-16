@@ -46,7 +46,7 @@ const Page = (): JSX.Element => {
             <div className='w-[90%] mx-auto flex justify-between items-center gap-2'>
                 <div className="h-64 w-full rounded-4xl p-2 flex items-end justify-between bg-white/10 backdrop-blur-md shadow-lg border border-white/20">
 
-                    <div className="w-full rounded-4xl p-4 px-6 flex items-center justify-between bg-white/10 backdrop-blur-md shadow-lg border border-white/20">
+                    <div className="w-full rounded-4xl p-4 px-6 flex items-center justify-between bg-white/10 backdrop-blur-md shadow-lg border border-white/20 font-semibold">
                         <span>Total</span>
                         <span>{inrFormatter(Total)}</span>
                     </div>
@@ -67,15 +67,16 @@ const Page = (): JSX.Element => {
             <div className='absolute bottom-0 w-full'>
                 <div className="m-6 rounded-4xl p-2 flex justify-end items-center gap-2 bg-white/10 backdrop-blur-md shadow-lg border border-white/20">
                     <div className='w-full rounded-4xl p-1 flex justify-center items-center bg-green-300/40 backdrop-blur-md shadow-lg border border-white/20'>
-                        <span className='text-center font-semibold'>Add</span>
+                        <span className='text-center font-semibold select-none'>Add</span>
                     </div>
 
-                    <div className='w-fit rounded-4xl p-1 px-3 bg-white/10 backdrop-blur-md shadow-lg border border-white/20'>
-                        <span className='text-center font-semibold'>Home</span>
+                    <div className='w-fit rounded-4xl p-1 px-3'>
+                        <span className='text-center font-semibold select-none'>Home</span>
                     </div>
 
-                    <div className='w-fit rounded-4xl p-1 px-3 bg-white/10 backdrop-blur-md shadow-lg border border-white/20'>
-                        <span className='text-center font-semibold'>Expenses</span>
+                    {/* <div className='w-fit rounded-4xl p-1 px-3 bg-white/10 backdrop-blur-md shadow-lg border border-white/20'> */}
+                    <div className='w-fit rounded-4xl p-1 px-3'>
+                        <span className='text-center font-semibold select-none'>Expenses</span>
                     </div>
                 </div>
             </div>
