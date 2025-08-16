@@ -27,6 +27,7 @@ const Page = (): JSX.Element => {
                 console.error('Error fetching data from shogun:', error)
             } else {
                 console.log('Shogun table data:', data)
+                data.sort((a: IShogun, b: IShogun) => new Date(b.date ?? "").getTime() - new Date(a.date ?? "").getTime())
                 dispatch(setShoguns(data))
             }
 
@@ -65,8 +66,11 @@ const Page = (): JSX.Element => {
             </div>
 
             <div className='absolute bottom-0 w-full'>
-                <div className="sticky bottom-0 m-6 rounded-4xl p-2 flex justify-end items-center gap-2 bg-white/10 backdrop-blur-md shadow-lg border border-white/20">
-                    <div className='w-full rounded-4xl p-1 flex justify-center items-center bg-green-300/40 backdrop-blur-md shadow-lg border border-white/20'>
+                <div className="m-6 rounded-4xl p-2 flex justify-end items-center gap-2 bg-white/10 backdrop-blur-md shadow-lg border border-white/20">
+                    <div
+                        className='w-full rounded-4xl p-1 flex justify-center items-center bg-green-300/40 backdrop-blur-md shadow-lg border border-white/20'
+                        onClick={() => console.log('Add new item')}
+                    >
                         <span className='text-center font-semibold select-none'>Add</span>
                     </div>
 
