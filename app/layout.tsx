@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-black">
+    <html lang="en">
       <body className="bg-gradient-to-br bg-fixed from-black via-gray-900 to-gray-800 text-white overflow-y-auto">
         <StoreProvider>
           {children}
