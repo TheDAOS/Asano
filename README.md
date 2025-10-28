@@ -1,4 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Asano - Personal Finance App
+
+A modern personal finance tracking application built with Next.js 13+, TypeScript, Redux Toolkit, and Supabase.
+
+## Project Architecture
+
+### Directory Structure
+
+```
+asano/
+├── app/                   # Next.js 13+ App Router
+│   ├── layout.tsx        # Root layout with providers
+│   ├── page.tsx          # Root page with PWA setup
+│   └── home/            # Home route
+├── components/           # Shared UI components
+│   └── ItemCard/        # Reusable transaction card
+├── lib/                  # Core business logic
+│   ├── features/        # Redux slices & features
+│   ├── hooks.ts         # Custom React hooks
+│   ├── store.ts         # Redux store configuration
+│   └── supabase/        # Database client & helpers
+├── types/               # TypeScript type definitions
+├── utils/               # Shared utilities
+└── public/              # Static assets & PWA files
+```
+
+### Key Technologies
+
+- **Next.js 13+**: App Router for server/client components
+- **TypeScript**: Full type safety across the application
+- **Redux Toolkit**: State management with typed hooks
+- **Supabase**: Backend as a service for data storage
+- **TailwindCSS**: Utility-first styling
+
+### State Management
+
+- Uses Redux Toolkit for global state
+- Implements proper loading/error states
+- Typed selectors and actions
+- Centralized store configuration
+
+### Data Flow
+
+1. User interactions trigger Redux actions
+2. Actions may call Supabase database functions
+3. Results update Redux store
+4. Components react to state changes
+
+### Components
+
+- Clear separation between client and server components
+- Reusable UI components in `/components`
+- Route-specific components in respective `/app` directories
+
+### Type Safety
+
+- Strict TypeScript configuration
+- Shared type definitions in `/types`
+- No use of `any` - proper typing throughout
+- Type-safe database operations
 
 ## Getting Started
 
