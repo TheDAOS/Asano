@@ -2,20 +2,23 @@ import AddToHomeScreenButton from "@/components/LandingPage/AddToHomeScreenButto
 
 export default function LandingPage() {
   return (
-    <div className="flex justify-center items-center w-screen h-screen bg-linear-150 from-lime-300/60 via-lime-300/30 to-lime-300/10">
-      <div className="max-w-[90%] mx-auto p-3 bg-black/30 backdrop-blur-md rounded-2xl border border-white/15 shadow-lg flex flex-col gap-6">
-        <div className="w-fit flex flex-col gap-1">
-          <div className="w-fit text-2xl font-extrabold px-4 py-1 backdrop-blur-md rounded-full border border-white/15 shadow-lg">
+    <div className="flex h-screen w-screen items-center justify-center bg-linear-150 from-lime-300/60 via-lime-300/30 to-lime-300/10">
+      <div className="mx-auto flex max-w-[90%] flex-col gap-6 rounded-2xl border border-white/15 bg-black/30 p-3 shadow-lg backdrop-blur-md">
+        <div className="flex w-fit flex-col gap-1">
+          <div className="w-fit rounded-full border border-white/15 px-4 py-1 text-2xl font-extrabold shadow-lg backdrop-blur-md">
             <h1>Asano</h1>
           </div>
-          <div className="w-fit text-lg px-4 py-1 backdrop-blur-md rounded-full border border-white/15 shadow-lg">
+          <div className="w-fit rounded-full border border-white/15 px-4 py-1 text-lg shadow-lg backdrop-blur-md">
             <span>Personal Finance App</span>
           </div>
         </div>
 
         <div className="flex flex-col gap-4">
-          <div className="px-4 py-3 backdrop-blur-md rounded-2xl border border-white/15 shadow-lg">
-            <span>A modern personal finance tracking application built with Next.js 16</span>
+          <div className="rounded-2xl border border-white/15 px-4 py-3 shadow-lg backdrop-blur-md">
+            <span>
+              A modern personal finance tracking application built with Next.js
+              16
+            </span>
           </div>
 
           <AddToHomeScreenButton />
