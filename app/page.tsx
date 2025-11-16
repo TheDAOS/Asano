@@ -1,6 +1,6 @@
 import AddToHomeScreenButton from "@/components/LandingPage/AddToHomeScreenButton";
 
-export default function Home() {
+export default function LandingPage() {
   return (
     <div className="flex justify-center items-center w-screen h-screen bg-linear-150 from-lime-300/60 via-lime-300/30 to-lime-300/10">
       <div className="max-w-[90%] mx-auto p-3 bg-black/30 backdrop-blur-md rounded-2xl border border-white/15 shadow-lg flex flex-col gap-6">
