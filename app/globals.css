@@ -13,3 +13,7 @@ body {
   top: 0;
   left: 0;
 } */
+
+.outer-container {
+  @apply "rounded-2xl backdrop-blur-md" border border-white/15 bg-black/30 p-3 shadow-lg;
+}

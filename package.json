@@ -13,6 +13,7 @@
   "dependencies": {
     "@lineiconshq/free-icons": "^1.0.3",
     "@lineiconshq/react-lineicons": "^1.0.5",
+    "@supabase/supabase-js": "^2.81.1",
     "next": "16.0.3",
     "react": "19.2.0",
     "react-dom": "19.2.0",
