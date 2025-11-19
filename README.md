@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Asano - Personal Finance App
+
+A modern personal finance tracking application built with Next.js 13+, TypeScript, Redux Toolkit, and Supabase.
 
 ## Getting Started
 

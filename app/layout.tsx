@@ -1,22 +1,32 @@
+import React from "react";
 import type { Metadata } from "next";
-import StoreProvider from "./StoreProvider";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import ThemeColorUpdater from "@/components/CommonLayout/ThemeColorUpdater";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Asano",
-  description: "A personal finance app",
+  title: "Asano - Personal Finance App",
+  description:
+    "A modern personal finance tracking application built with Next.js 16.",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body className="bg-gradient-to-br bg-fixed from-black via-gray-900 to-gray-800 text-white overflow-y-auto">
-        <StoreProvider>
-          {children}
-        </StoreProvider>
+      <head>
+        <meta name="theme-color" content="#000000" />
+      </head>
+      <body
+        className={`bg-black font-sans text-gray-100 antialiased ${inter.className}`}
+      >
+        <ThemeColorUpdater color="#a3e635" />
+        {children}
       </body>
     </html>
   );
