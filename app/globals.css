@@ -1,5 +1,31 @@
 @import "tailwindcss";
 
+/* Extend Tailwind’s theme using @theme */
+@theme {
+  /* Pastel 2048 tiles */
+  --color-pastel-2: #a8dadc;
+  --color-pastel-4: #ffe5d9;
+  --color-pastel-8: #ffd6a5;
+  --color-pastel-16: #fdac53;
+  --color-pastel-32: #f9c2b2;
+  --color-pastel-64: #ffabab;
+  --color-pastel-128: #ffc8dd;
+  --color-pastel-256: #fae1dd;
+  --color-pastel-512: #b5eaea;
+  --color-pastel-1024: #cdb4db;
+  --color-pastel-2048: #ffc8a2;
+
+  /* UI colors */
+  --color-ui-background: #f0f4f8;
+  --color-ui-board: #e0e7ff;
+  --color-ui-scorePanel: #ffc8dd;
+  --color-ui-button: #fdac53;
+  --color-ui-buttonText: #1d1f29;
+  --color-ui-textBody: #1d3557;
+  --color-ui-tileTextDark: #1d1f29;
+  --color-ui-tileTextLight: #1d3557;
+}
+
 /* html, body {
   width: 100%;
   height: 100%;
@@ -13,7 +39,3 @@ body {
   top: 0;
   left: 0;
 } */
-
-.outer-container {
-  @apply "rounded-2xl backdrop-blur-md" border border-white/15 bg-black/30 p-3 shadow-lg;
-}

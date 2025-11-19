@@ -1,4 +1,6 @@
+// import ThemeColorUpdater from "@/components/CommonLayout/ThemeColorUpdater";
 import AddToHomeScreenButton from "@/components/LandingPage/AddToHomeScreenButton";
+import Link from "next/link";
 
 export default function LandingPage() {
   return (
@@ -6,7 +8,7 @@ export default function LandingPage() {
       <div className="mx-auto flex max-w-[90%] flex-col gap-6 rounded-2xl border border-white/15 bg-black/30 p-3 shadow-lg backdrop-blur-md">
         <div className="flex w-fit flex-col gap-1">
           <div className="w-fit rounded-full border border-white/15 px-4 py-1 text-2xl font-extrabold shadow-lg backdrop-blur-md">
-            <h1>Asano</h1>
+            <Link href="/home">Asano</Link>
           </div>
           <div className="w-fit rounded-full border border-white/15 px-4 py-1 text-lg shadow-lg backdrop-blur-md">
             <span>Personal Finance App</span>
@@ -24,6 +26,8 @@ export default function LandingPage() {
           <AddToHomeScreenButton />
         </div>
       </div>
+
+      {/* <ThemeColorUpdater color="#bef26499" /> */}
     </div>
   );
 }
