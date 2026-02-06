@@ -11,6 +11,9 @@ export default function Home() {
         <div className="w-fit rounded-full border border-white/15 bg-black/30 px-4 py-1 text-xl font-bold shadow-lg backdrop-blur-md">
           <Link href="/home/2048">Play 2048</Link>
         </div>
+        <div className="w-fit rounded-full border border-white/15 bg-black/30 px-4 py-1 text-xl font-bold shadow-lg backdrop-blur-md">
+          <Link href="/home/tic-tac-toe">Play Tic Tac Toe</Link>
+        </div>
       </div>
       {/* <ThemeColorUpdater color="#bef26499" /> */}
     </>
