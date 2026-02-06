@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "upgrade": "next upgrade",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
@@ -15,7 +16,7 @@
     "@lineiconshq/react-lineicons": "^1.0.5",
     "@supabase/supabase-js": "^2.81.1",
     "gsap": "^3.13.0",
-    "next": "16.0.3",
+    "next": "16.0.10",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "zustand": "^5.0.8"
